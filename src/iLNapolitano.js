@@ -110,12 +110,38 @@ const SCREEN_RESPONSES = {
 
   ENSALADAS_POSTRES: {
     screen: "ENSALADAS_POSTRES",
-    data: {},
+    data: {
+      chk_ens_1: false,
+      chk_ens_2: false,
+      chk_ens_3: false,
+      chk_pos_1: false,
+      chk_pos_2: false,
+      chk_pos_3: false,
+      chk_pos_4: false,
+      chk_pos_5: false,
+      chk_pos_6: false,
+      chk_pos_7: false,
+      chk_pos_8: false,
+      selector_cantidades,
+    },
   },
 
   BEBIDAS: {
     screen: "BEBIDAS",
-    data: {},
+    data: {
+      chk_beb_1: false,
+      chk_beb_2: false,
+      chk_beb_3: false,
+      chk_beb_4: false,
+      chk_beb_5: false,
+      chk_beb_6: false,
+      chk_beb_7: false,
+      chk_beb_8: false,
+      chk_beb_9: false,
+      chk_beb_10: false,
+      chk_beb_11: false,
+      selector_cantidades,
+    },
   },
 
   RESUMEN_PEDIDO: {
@@ -288,6 +314,7 @@ export const getNextScreen = async (decryptedBody) => {
         const {
           entradas = {},
           sugerencias = {},
+          ensaladasPostres = {},
           bebidas = {},
           obs_productos = "",
           obs_ENSALADAS_POSTRES = "",
@@ -296,6 +323,7 @@ export const getNextScreen = async (decryptedBody) => {
         const productosPedido = {
           ...entradas,
           ...sugerencias,
+          ...ensaladasPostres,
           ...bebidas,
         };
 
@@ -310,8 +338,6 @@ export const getNextScreen = async (decryptedBody) => {
             mensaje: texto,
             valorTotal: totalPedido,
             valorTotalStr: totalString,
-            obsProductos: obs_productos,
-            obsAdcionales: obs_ENSALADAS_POSTRES,
           },
         };
 
