@@ -1,4 +1,4 @@
-import { productosBumang } from "./productos.js";
+import { iLNapolitanoProductos } from "./iLNapolitanoProductos.js";
 
 const SCREEN_RESPONSES = {
   ENTRADAS: {
@@ -8,6 +8,11 @@ const SCREEN_RESPONSES = {
 
   SUGERENCIAS: {
     screen: "SUGERENCIAS",
+    data: {},
+  },
+
+  CANTIDADES: {
+    screen: "CANTIDADES",
     data: {},
   },
 
@@ -83,7 +88,7 @@ const SPLIT_ADDITIONAL_AND_NOTES = (dataObj = {}) => {
 function ordenProductos(productos = {}) {
   return Object.entries(productos).map(([producto, cantidadStr]) => {
     const cantidad = parseInt(cantidadStr, 10) || 0;
-    const precioUnitario = productosBumang[producto] ?? 0;
+    const precioUnitario = iLNapolitanoProductos[producto] ?? 0;
 
     return { producto, cantidad, precioUnitario };
   });
@@ -162,6 +167,15 @@ export const getNextScreen = async (decryptedBody) => {
 
       case "SUGERENCIAS":
         return {
+          ...SCREEN_RESPONSES.CANTIDADES,
+          data: {
+            ...SCREEN_RESPONSES.CANTIDADES.data,
+            ...data,
+          },
+        };
+
+      case "CANTIDADES":
+        return {
           ...SCREEN_RESPONSES.ENSALADAS_POSTRES,
           data: {
             ...SCREEN_RESPONSES.ENSALADAS_POSTRES.data,
@@ -180,16 +194,16 @@ export const getNextScreen = async (decryptedBody) => {
 
       case "BEBIDAS":
         const {
-          productos = {},
-          ENSALADAS_POSTRES = {},
+          entradas = {},
+          sugerencias = {},
           bebidas = {},
           obs_productos = "",
           obs_ENSALADAS_POSTRES = "",
         } = data ?? {};
 
         const productosPedido = {
-          ...productos,
-          ...ENSALADAS_POSTRES,
+          ...entradas,
+          ...sugerencias,
           ...bebidas,
         };
 
