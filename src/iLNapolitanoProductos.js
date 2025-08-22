@@ -79,6 +79,7 @@ export const iLNapolitanoProductos = {
 
   //Bebidas
   "Peroni": 15000,
+  "Stella": 12000,
   "BBC": 12000,
   "Club Colombia": 10000,
   "San Pellegrino": 20000,
@@ -88,6 +89,6 @@ export const iLNapolitanoProductos = {
   "Agua Hatsu con gas": 7000,
   "Agua Hatsu sin gas": 7000,
   "Canada Dry Ginger": 10000,
-  "Coca-Cola normal": 10000,
-  "Coca-Cola zero": 10000
+  "Coca-Cola Normal": 10000,
+  "Coca-Cola Zero": 10000
 };
