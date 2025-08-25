@@ -15,6 +15,22 @@ const SCREEN_RESPONSES = {
       chk_entrada_8: false,
       chk_entrada_9: false,
       chk_entrada_10: false,
+    },
+  },
+
+  CANT_ENTRADAS: {
+    screen: "CANT_ENTRADAS",
+    data: {
+      chk_entrada_1: false,
+      chk_entrada_2: false,
+      chk_entrada_3: false,
+      chk_entrada_4: false,
+      chk_entrada_5: false,
+      chk_entrada_6: false,
+      chk_entrada_7: false,
+      chk_entrada_8: false,
+      chk_entrada_9: false,
+      chk_entrada_10: false,
       selector_cantidades,
     },
   },
@@ -268,16 +284,42 @@ export const getNextScreen = async (decryptedBody) => {
       ...SCREEN_RESPONSES.ENTRADAS,
       data: {
         ...SCREEN_RESPONSES.ENTRADAS.data,
-      }
+      },
     };
   }
 
   if (action === "data_exchange") {
     // handle the request based on the current screen
     switch (screen) {
-      // handles when user submits PRODUCT_SELECTOR screen
-
       case "ENTRADAS":
+        let chkEntrada = false;
+
+        for (const key in data) {
+          if (key.startsWith("chk_entrada_") && data[key] === true) {
+            chkEntrada = true;
+            break;
+          }
+        }
+
+        if (chkEntrada) {
+          return {
+            ...SCREEN_RESPONSES.CANT_ENTRADAS,
+            data: {
+              ...SCREEN_RESPONSES.CANT_ENTRADAS.data,
+              ...data,
+            },
+          };
+        } else {
+          return {
+            ...SCREEN_RESPONSES.SUGERENCIAS,
+            data: {
+              ...SCREEN_RESPONSES.SUGERENCIAS.data,
+              ...data,
+            },
+          };
+        }
+
+      case "CANT_ENTRADAS":
         return {
           ...SCREEN_RESPONSES.SUGERENCIAS,
           data: {
