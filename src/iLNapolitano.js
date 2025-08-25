@@ -385,6 +385,7 @@ export const getNextScreen = async (decryptedBody) => {
             mensaje: texto,
             valorTotal: totalPedido,
             valorTotalStr: totalString,
+            obs_productos: obs_productos,
           },
         };
 
