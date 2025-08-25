@@ -73,7 +73,7 @@ export const iLNapolitanoProductos = {
   "Crème Brulée": 18000,
   "Tiramisú Tropical": 19000,
   "CheeseCake Suizo": 22000,
-  "Torta de Chocolate Alemana": 17000,
+  "Torta Chocolate Alemana": 17000,
   "Torta de Croissant": 16000,
   "Red Velvet Pistacho": 17000,
 
