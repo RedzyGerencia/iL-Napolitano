@@ -266,6 +266,9 @@ export const getNextScreen = async (decryptedBody) => {
   if (action === "INIT") {
     return {
       ...SCREEN_RESPONSES.ENTRADAS,
+      data: {
+        ...SCREEN_RESPONSES.ENTRADAS.data,
+      }
     };
   }
 
