@@ -65,7 +65,7 @@ export const iLNapolitanoProductos = {
   //Ensaladas
   "Burrata Trufada": 46000,
   "Insalata Caprese": 46000,
-  "Ensalada César al Estilo Napolitano": 38000,
+  "Ensalada César Napolitano": 38000,
 
   //Postres
   "Pistacho Gold": 19000,
@@ -78,9 +78,9 @@ export const iLNapolitanoProductos = {
   "Red Velvet Pistacho": 17000,
 
   //Bebidas
-  "Peroni": 15000,
-  "Stella": 12000,
-  "BBC": 12000,
+  Peroni: 15000,
+  Stella: 12000,
+  BBC: 12000,
   "Club Colombia": 10000,
   "San Pellegrino": 20000,
   "Té Hatsu": 12000,
@@ -90,5 +90,5 @@ export const iLNapolitanoProductos = {
   "Agua Hatsu sin gas": 7000,
   "Canada Dry Ginger": 10000,
   "Coca-Cola Normal": 10000,
-  "Coca-Cola Zero": 10000
+  "Coca-Cola Zero": 10000,
 };
