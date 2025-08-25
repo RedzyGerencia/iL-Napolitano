@@ -156,6 +156,8 @@ const SCREEN_RESPONSES = {
       chk_beb_9: false,
       chk_beb_10: false,
       chk_beb_11: false,
+      chk_beb_12: false,
+      chk_beb_13: false,
       selector_cantidades,
     },
   },
