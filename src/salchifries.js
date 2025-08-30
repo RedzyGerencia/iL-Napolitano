@@ -109,7 +109,7 @@ export const getNextScreen = async (decryptedBody) => {
     // handle the request based on the current screen
     switch (screen) {
       case "INICIO":
-        const arrayTipoPapas = new Array(data.tipo_papas);
+        const arrayTipoPapas = data?.tipo_papas;
         const papasArmadas = arrayTipoPapas.includes("Papas armadas");
 
         if (papasArmadas) {
