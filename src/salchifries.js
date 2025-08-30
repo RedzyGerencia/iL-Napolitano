@@ -24,7 +24,23 @@ const SCREEN_RESPONSES = {
 
   ARMADAS: {
     screen: "ARMADAS",
-    data: {},
+    data: {
+      chk_papa_1: false,
+      chk_papa_2: false,
+      chk_papa_3: false,
+      chk_papa_4: false,
+      chk_papa_5: false,
+      base_francesa: true,
+      base_criolla: true,
+      base_francesa_2: true,
+      base_criolla_2: true,
+      base_francesa_3: true,
+      base_criolla_3: true,
+      base_francesa_4: true,
+      base_criolla_4: true,
+      base_francesa_5: true,
+      base_criolla_5: true,
+    },
   },
 
   BEBIDAS: {
@@ -60,80 +76,6 @@ const SCREEN_RESPONSES = {
   },
 };
 
-const SPLIT_PRODUCTS_AND_NOTES = (dataObj = {}) => {
-  const SELECTED_PRODUCTS = [];
-  const OBS_PRODUCTS = [];
-
-  for (const [key, value] of Object.entries(dataObj)) {
-    if (key.startsWith("can_")) {
-      Array.isArray(value)
-        ? SELECTED_PRODUCTS.push(...value)
-        : SELECTED_PRODUCTS.push(value);
-    } else if (key.startsWith("obs_")) {
-      Array.isArray(value)
-        ? OBS_PRODUCTS.push(...value)
-        : OBS_PRODUCTS.push(value);
-    }
-  }
-  return { SELECTED_PRODUCTS, OBS_PRODUCTS };
-};
-
-const SPLIT_ADDITIONAL_AND_NOTES = (dataObj = {}) => {
-  const SELECTED_ADDITIONAL = [];
-  const OBS_ADDITIONAL = [];
-
-  for (const [key, value] of Object.entries(dataObj)) {
-    if (key.startsWith("can_ad")) {
-      Array.isArray(value)
-        ? SELECTED_ADDITIONAL.push(...value)
-        : SELECTED_ADDITIONAL.push(value);
-    } else if (key.startsWith("obs_ENSALADAS_POSTRES")) {
-      Array.isArray(value)
-        ? OBS_ADDITIONAL.push(...value)
-        : OBS_ADDITIONAL.push(value);
-    }
-  }
-  return { SELECTED_ADDITIONAL, OBS_ADDITIONAL };
-};
-
-function ordenProductos(productos = {}) {
-  return Object.entries(productos).map(([producto, cantidadStr]) => {
-    const cantidad = parseInt(cantidadStr, 10) || 0;
-    const precioUnitario = iLNapolitanoProductos[producto] ?? 0;
-
-    return { producto, cantidad, precioUnitario };
-  });
-}
-
-function agregarSubtotalyObtenertotal(lineas) {
-  let total = 0;
-
-  for (const linea of lineas) {
-    linea.subtotal = linea.precioUnitario * linea.cantidad;
-    total += linea.subtotal;
-  }
-
-  return total;
-}
-
-function formatearResumenPedido(lineasPedido = []) {
-  const formatoCOP = new Intl.NumberFormat("es-CO");
-
-  let total = 0;
-
-  const filas = lineasPedido.map(({ producto, cantidad, precioUnitario }) => {
-    const subTotal = cantidad * precioUnitario;
-    total += subTotal;
-    return `${cantidad} x ${producto} - $${formatoCOP.format(subTotal)}`;
-  });
-
-  const texto = [...filas].join("\n");
-
-  const totalString = `$${formatoCOP.format(total)}`;
-
-  return { texto, total, totalString };
-}
-
 export const getNextScreen = async (decryptedBody) => {
   const { screen, data, version, action, flow_token } = decryptedBody;
 
@@ -167,9 +109,18 @@ export const getNextScreen = async (decryptedBody) => {
     // handle the request based on the current screen
     switch (screen) {
       case "INICIO":
-        return {
-          ...SCREEN_RESPONSES.ARMADAS,
-        };
+        const arrayTipoPapas = new Array(data.tipo_papas);
+        const papasArmadas = arrayTipoPapas.includes("Papas armadas");
+
+        if (papasArmadas) {
+          return {
+            ...SCREEN_RESPONSES.ARMADAS,
+          };
+        } else {
+          return {
+            ...SCREEN_RESPONSES.CLASICAS,
+          };
+        }
 
       case "ARMADAS":
         return {
@@ -192,27 +143,6 @@ export const getNextScreen = async (decryptedBody) => {
         };
 
       case "BEBIDAS":
-        /*
-        const {
-          entradas = {},
-          sugerencias = {},
-          ensaladasPostres = {},
-          bebidas = {},
-          obs_productos = "",
-          obs_ENSALADAS_POSTRES = "",
-        } = data ?? {};
-
-        const productosPedido = {
-          ...entradas,
-          ...sugerencias,
-          ...ensaladasPostres,
-          ...bebidas,
-        };
-
-        const lineasPedido = ordenProductos(productosPedido);
-        const totalPedido = agregarSubtotalyObtenertotal(lineasPedido);
-        const { texto, totalString } = formatearResumenPedido(lineasPedido);
-        */
         return {
           ...SCREEN_RESPONSES.RESUMEN_PEDIDO,
           data: {
