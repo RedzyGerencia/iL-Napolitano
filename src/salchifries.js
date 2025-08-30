@@ -109,12 +109,16 @@ export const getNextScreen = async (decryptedBody) => {
     // handle the request based on the current screen
     switch (screen) {
       case "INICIO":
-        const arrayTipoPapas = data?.tipo_papas;
+        const arrayTipoPapas = data?.tipo_papas ?? [];
         const papasArmadas = arrayTipoPapas.includes("Papas armadas");
+        const papasClasicas = arrayTipoPapas.includes("Papas clasicas");
 
         if (papasArmadas) {
           return {
             ...SCREEN_RESPONSES.ARMADAS,
+            data: {
+              chk_papas_clasicas: papasClasicas,
+            },
           };
         } else {
           return {
@@ -123,44 +127,61 @@ export const getNextScreen = async (decryptedBody) => {
         }
 
       case "ARMADAS":
-        return {
-          ...SCREEN_RESPONSES.CLASICAS,
-        };
+        const papaClasica = data?.["chk_papas_clasicas"] ?? false;
+
+        if (papaClasica) {
+          return {
+            ...SCREEN_RESPONSES.CLASICAS,
+            data: {
+              ...SCREEN_RESPONSES.CLASICAS.data,
+              ...data,
+            },
+          };
+        } else {
+          return {
+            ...SCREEN_RESPONSES.BEBIDAS,
+            data: {
+              ...SCREEN_RESPONSES.BEBIDAS.data,
+              ...data,
+            },
+          };
+        }
 
       case "CLASICAS":
         return {
           ...SCREEN_RESPONSES.CANT_CLASICAS,
+          data: {
+            ...SCREEN_RESPONSES.CANT_CLASICAS.data,
+            ...data,
+          },
         };
 
       case "CANT_CLASICAS":
         return {
           ...SCREEN_RESPONSES.ADC_CLASICAS,
+          data: {
+            ...SCREEN_RESPONSES.ADC_CLASICAS.data,
+            ...data,
+          },
         };
 
       case "ADC_CLASICAS":
         return {
           ...SCREEN_RESPONSES.BEBIDAS,
+          data: {
+            ...SCREEN_RESPONSES.BEBIDAS.data,
+            ...data,
+          },
         };
 
       case "BEBIDAS":
         return {
           ...SCREEN_RESPONSES.RESUMEN_PEDIDO,
-          data: {
-            ...SCREEN_RESPONSES.RESUMEN_PEDIDO.data,
-            mensaje: texto,
-            valorTotal: totalPedido,
-            valorTotalStr: totalString,
-            obs_productos: obs_productos,
-          },
         };
 
       case "RESUMEN_PEDIDO":
         return {
           ...SCREEN_RESPONSES.FORMULARIO,
-          data: {
-            ...SCREEN_RESPONSES.FORMULARIO.data,
-            ...data,
-          },
         };
 
       default:
