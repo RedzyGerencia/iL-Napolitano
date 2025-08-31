@@ -53,56 +53,7 @@ const SCREEN_RESPONSES = {
   CANT_CLASICAS: {
     screen: "CANT_CLASICAS",
     data: {
-      selector_cantidades: [
-        {
-          id: "1",
-          title: "01",
-        },
-        {
-          id: "2",
-          title: "02",
-        },
-        {
-          id: "3",
-          title: "03",
-        },
-        {
-          id: "4",
-          title: "04",
-        },
-        {
-          id: "5",
-          title: "05",
-        },
-        {
-          id: "6",
-          title: "06",
-        },
-        {
-          id: "7",
-          title: "07",
-        },
-        {
-          id: "8",
-          title: "08",
-        },
-        {
-          id: "9",
-          title: "09",
-        },
-        {
-          id: "10",
-          title: "10",
-        },
-        {
-          id: "11",
-          title: "11",
-        },
-        {
-          id: "12",
-          title: "12",
-        },
-      ],
+      selector_cantidades,
     },
   },
 
@@ -258,13 +209,32 @@ export const getNextScreen = async (decryptedBody) => {
         };
 
       case "ADC_CLASICAS":
-        return {
-          ...SCREEN_RESPONSES.BEBIDAS,
-          data: {
-            ...SCREEN_RESPONSES.BEBIDAS.data,
-            ...data,
-          },
-        };
+        let chkAdicionales = false;
+
+        for (const key in data) {
+          if (key.startsWith("adc_") && data[key] === true) {
+            chkAdicionales = true;
+            break;
+          }
+        }
+
+        if (chkAdicionales) {
+          return {
+            ...SCREEN_RESPONSES.CANT_ADC,
+            data: {
+              ...SCREEN_RESPONSES.CANT_ADC.data,
+              ...data,
+            },
+          };
+        } else {
+          return {
+            ...SCREEN_RESPONSES.BEBIDAS,
+            data: {
+              ...SCREEN_RESPONSES.BEBIDAS.data,
+              ...data,
+            },
+          };
+        }
 
       case "BEBIDAS":
         return {
