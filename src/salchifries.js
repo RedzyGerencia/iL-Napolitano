@@ -7,21 +7,6 @@ const SCREEN_RESPONSES = {
     data: {},
   },
 
-  CLASICAS: {
-    screen: "CLASICAS",
-    data: {},
-  },
-
-  CANT_CLASICAS: {
-    screen: "CANT_CLASICAS",
-    data: {},
-  },
-
-  ADC_CLASICAS: {
-    screen: "ADC_CLASICAS",
-    data: {},
-  },
-
   ARMADAS: {
     screen: "ARMADAS",
     data: {
@@ -40,6 +25,112 @@ const SCREEN_RESPONSES = {
       base_criolla_4: true,
       base_francesa_5: true,
       base_criolla_5: true,
+    },
+  },
+
+  CLASICAS: {
+    screen: "CLASICAS",
+    data: {
+      base_salchimorrongo_1: false,
+      base_salchimorrongo_2: false,
+      base_salchipork_1: false,
+      base_salchipork_2: false,
+      base_salchicharron_1: false,
+      base_salchicharron_2: false,
+      base_costifries_1: false,
+      base_costifries_2: false,
+      base_salchibumanguesas_1: false,
+      base_salchibumanguesas_2: false,
+      base_salchicriolla_1: false,
+      base_salchicriolla_2: false,
+      base_salchimex_1: false,
+      base_salchimex_2: false,
+      base_salchichori_1: false,
+      base_salchichori_2: false,
+    },
+  },
+
+  CANT_CLASICAS: {
+    screen: "CANT_CLASICAS",
+    data: {
+      selector_cantidades: [
+        {
+          id: "1",
+          title: "01",
+        },
+        {
+          id: "2",
+          title: "02",
+        },
+        {
+          id: "3",
+          title: "03",
+        },
+        {
+          id: "4",
+          title: "04",
+        },
+        {
+          id: "5",
+          title: "05",
+        },
+        {
+          id: "6",
+          title: "06",
+        },
+        {
+          id: "7",
+          title: "07",
+        },
+        {
+          id: "8",
+          title: "08",
+        },
+        {
+          id: "9",
+          title: "09",
+        },
+        {
+          id: "10",
+          title: "10",
+        },
+        {
+          id: "11",
+          title: "11",
+        },
+        {
+          id: "12",
+          title: "12",
+        },
+      ],
+    },
+  },
+
+  ADC_CLASICAS: {
+    screen: "ADC_CLASICAS",
+    data: {},
+  },
+
+  CANT_ADC: {
+    screen: "CANT_ADC",
+    data: {
+      adc_salchicha: false,
+      adc_chorizo: false,
+      adc_tocineta: false,
+      adc_morrongo: false,
+      adc_carne_trozos: false,
+      adc_pollo_desmechado: false,
+      adc_pechuga_trozos: false,
+      adc_carne_desmechada: false,
+      adc_costillas: false,
+      adc_pulled_pork: false,
+      adc_chicharrones: false,
+      adc_queso_gratinado: false,
+      adc_maduritos: false,
+      adc_maiz_dulce: false,
+      adc_guacamole: false,
+      adc_papa_fosforo: false,
+      adc_bano_queso: false,
     },
   },
 
@@ -117,6 +208,7 @@ export const getNextScreen = async (decryptedBody) => {
           return {
             ...SCREEN_RESPONSES.ARMADAS,
             data: {
+              ...SCREEN_RESPONSES.ARMADAS.data,
               chk_papas_clasicas: papasClasicas,
             },
           };
