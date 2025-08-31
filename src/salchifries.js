@@ -93,7 +93,19 @@ const SCREEN_RESPONSES = {
 
   CANT_BEBIDAS: {
     screen: "CANT_BEBIDAS",
-    data: {},
+    data: {
+      chk_bebida_1: false,
+      chk_bebida_2: false,
+      chk_bebida_3: false,
+      chk_bebida_4: false,
+      chk_bebida_5: false,
+      chk_bebida_6: false,
+      chk_bebida_7: false,
+      chk_bebida_8: false,
+      chk_bebida_9: false,
+      chk_bebida_10: false,
+      selector_cantidades,
+    },
   },
 
   RESUMEN_PEDIDO: {
@@ -237,7 +249,40 @@ export const getNextScreen = async (decryptedBody) => {
           };
         }
 
+      case "CANT_ADC":
+        return {
+          ...SCREEN_RESPONSES.BEBIDAS,
+          data: {
+            ...SCREEN_RESPONSES.BEBIDAS.data,
+            ...data,
+          },
+        };
+
       case "BEBIDAS":
+        let chkBebidas = false;
+
+        for (const key in data) {
+          if (key.startsWith("chk_bebida_") && data[key] === true) {
+            chkBebidas = true;
+            break;
+          }
+        }
+
+        if (chkBebidas) {
+          return {
+            ...SCREEN_RESPONSES.CANT_BEBIDAS,
+            data: {
+              ...SCREEN_RESPONSES.CANT_BEBIDAS.data,
+              ...data,
+            },
+          };
+        } else {
+          return {
+            ...SCREEN_RESPONSES.RESUMEN_PEDIDO,
+          };
+        }
+
+      case "CANT_BEBIDAS":
         return {
           ...SCREEN_RESPONSES.RESUMEN_PEDIDO,
         };
