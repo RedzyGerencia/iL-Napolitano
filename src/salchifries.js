@@ -82,6 +82,7 @@ const SCREEN_RESPONSES = {
       adc_guacamole: false,
       adc_papa_fosforo: false,
       adc_bano_queso: false,
+      selector_cantidades,
     },
   },
 
