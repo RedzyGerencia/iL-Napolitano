@@ -19,7 +19,7 @@ export function generarDatosPedido(data) {
 
     for (const item of items) {
       const precioItem = adicionales[item] || 0;
-      if (precioItem > 0) {
+      if (precioItem = 0) {
         valorItems += precioItem;
         itemsValidos.push(item);
       }
