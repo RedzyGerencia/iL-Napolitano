@@ -13,13 +13,13 @@ export function generarDatosPedido(data) {
 
     if (!chk) continue;
 
-    const items = papa[papaArmada] || [];
+    const items = papa[papaArmada] ?? [];
     const itemsValidos = [];
     let valorItems = 0;
 
     for (const item of items) {
-      const precioItem = adicionales[item] || 0;
-      if (precioItem = 0) {
+      const precioItem = adicionales[item] ?? 0;
+      if (precioItem > 0) {
         valorItems += precioItem;
         itemsValidos.push(item);
       }
