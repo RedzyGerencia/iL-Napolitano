@@ -90,6 +90,12 @@ export function generarDatosPedido(data) {
 
   let texto = "";
   resumen.forEach((item) => {
+    if (item.tipo === "armada") {
+      texto += `Papa armada\n`;
+      texto += `${item.producto}\n`;
+      texto += `Subtotal: ${formatCOP(item.precio)}\n\n`;
+    }
+
     if (item.tipo === "clasica") {
       texto += `Papa clasica\n`;
       texto += `${item.cantidad} x ${item.producto}\n`;
