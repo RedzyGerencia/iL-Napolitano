@@ -7,6 +7,33 @@ export function generarDatosPedido(data) {
   let totalBebidas = 0;
   let resumen = [];
 
+  for (const papaArmada in data.papas_armadas) {
+    const papa = data.papas_armadas[papaArmada];
+    const chk = papa[`chk_${papaArmada}`] || false;
+
+    if (!chk) continue;
+
+    const items = papa[papaArmada] || [];
+    const itemsValidos = [];
+    let valorItems = 0;
+
+    for (const item of items) {
+      const precioItem = adicionales[item] || 0;
+      if (precioItem > 0) {
+        valorItems += precioItem;
+        itemsValidos.push(item);
+      }
+    }
+
+    totalPapasArmadas += valorItems;
+
+    resumen.push({
+      tipo: "armada",
+      producto: itemsValidos.join(", "),
+      precio: valorItems,
+    });
+  }
+
   for (const papaClasica in data.papas_clasicas) {
     const cantidad = Number(data.papas_clasicas[papaClasica]);
     if (!cantidad) continue;
