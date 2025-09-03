@@ -174,6 +174,10 @@ export const getNextScreen = async (decryptedBody) => {
       case "RESUMEN_PEDIDO":
         return {
           ...SCREEN_RESPONSES.FORMULARIO,
+          data: {
+            ...SCREEN_RESPONSES.FORMULARIO.data,
+            ...data,
+          },
         };
 
       default:
