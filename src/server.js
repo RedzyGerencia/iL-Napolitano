@@ -1,6 +1,6 @@
 import express from "express";
 import { decryptRequest, encryptResponse, FlowEndpointException } from "./encryption.js";
-import { getNextScreen } from "./salchifries/salchifries.js";
+import { getNextScreen } from "./miyagi/miyagi.js";
 import crypto from "crypto";
 
 const app = express();

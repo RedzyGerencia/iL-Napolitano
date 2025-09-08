@@ -1,0 +1,126 @@
+import { selector_cantidades } from "./components.js";
+
+export const SCREEN_RESPONSES = {
+  Inicio: {
+    screen: "Inicio",
+    data: {
+      entradas: false,
+      r_frescos: false,
+      r_cocidos: false,
+      r_tempura: false,
+      platos_esp: false,
+      combos: false,
+    },
+  },
+
+  Productos: {
+    screen: "Productos",
+    data: {
+      entradas: false,
+      r_frescos: false,
+      r_cocidos: false,
+      r_tempura: false,
+      platos_esp: false,
+      combos: false,
+      chk_ent_1: false,
+      chk_ent_2: false,
+      chk_ent_3: false,
+      chk_r_fres_1: false,
+      chk_r_fres_2: false,
+      chk_r_fres_3: false,
+      chk_r_fres_4: false,
+      chk_r_fres_5: false,
+      chk_r_coci_1: false,
+      chk_r_coci_2: false,
+      chk_r_coci_3: false,
+      chk_r_coci_4: false,
+      chk_r_coci_5: false,
+      chk_r_temp_1: false,
+      chk_r_temp_2: false,
+      chk_r_temp_3: false,
+      chk_r_temp_4: false,
+      chk_r_temp_5: false,
+      chk_p_esp_1: false,
+      chk_p_esp_2: false,
+      chk_p_esp_3: false,
+      chk_p_esp_4: false,
+      chk_p_esp_5: false,
+      chk_combo_1: false,
+      chk_combo_2: false,
+      chk_combo_3: false,
+      chk_combo_4: false,
+      chk_combo_5: false,
+    },
+  },
+
+  Cantidades: {
+    screen: "Cantidades",
+    data: {
+      chk_ent_1: false,
+      chk_ent_2: false,
+      chk_ent_3: false,
+      chk_r_fres_1: false,
+      chk_r_fres_2: false,
+      chk_r_fres_3: false,
+      chk_r_fres_4: false,
+      chk_r_fres_5: false,
+      chk_r_coci_1: false,
+      chk_r_coci_2: false,
+      chk_r_coci_3: false,
+      chk_r_coci_4: false,
+      chk_r_coci_5: false,
+      chk_r_temp_1: false,
+      chk_r_temp_2: false,
+      chk_r_temp_3: false,
+      chk_r_temp_4: false,
+      chk_r_temp_5: false,
+      chk_p_esp_1: false,
+      chk_p_esp_2: false,
+      chk_p_esp_3: false,
+      chk_p_esp_4: false,
+      chk_p_esp_5: false,
+      chk_combo_1: false,
+      chk_combo_2: false,
+      chk_combo_3: false,
+      chk_combo_4: false,
+      chk_combo_5: false,
+      selector_cantidades,
+    },
+  },
+
+  Bebidas: {
+    screen: "Bebidas",
+    data: {
+      chk_beb_1: false,
+      chk_beb_2: false,
+      chk_beb_3: false,
+      chk_beb_4: false,
+      chk_beb_5: false,
+      chk_beb_6: false,
+      chk_beb_7: false,
+      selector_cantidades,
+    },
+  },
+
+  Resumen: {
+    screen: "Resumen",
+    data: {},
+  },
+
+  Formulario: {
+    screen: "Formulario",
+    data: {},
+  },
+
+  SUCCESS: {
+    screen: "SUCCESS",
+    data: {
+      extension_message_response: {
+        params: {
+          flow_token: "REPLACE_FLOW_TOKEN",
+          some_param_name: "PASS_CUSTOM_VALUE",
+        },
+      },
+    },
+  },
+};
