@@ -1,4 +1,15 @@
-export const selector_cantidades = [
+export const selector_1 = [
+  {
+    id: "1",
+    title: "01",
+  },
+  {
+    id: "2",
+    title: "02",
+  },
+];
+
+export const selector_2 = [
   {
     id: "1",
     title: "01",

@@ -1,5 +1,3 @@
-import { selector_cantidades } from "./components.js";
-
 export const SCREEN_RESPONSES = {
   Pizzas: {
     screen: "Pizzas",
@@ -17,34 +15,21 @@ export const SCREEN_RESPONSES = {
       chk_pizza_11: false,
       chk_pizza_12: false,
       chk_pizza_13: false,
-      selector_1: {
-        type: "array",
-        items: {
-          type: "object",
-          properties: {
-            id: {
-              type: "string",
-            },
-            title: {
-              type: "string",
-            },
-          },
+
+      selector_1: [
+        {
+          id: "1",
+          title: "01",
         },
-        __example__: [
-          {
-            id: "1",
-            title: "01",
-          },
-          {
-            id: "2",
-            title: "02",
-          },
-          {
-            id: "3",
-            title: "03",
-          },
-        ],
-      },
+        {
+          id: "2",
+          title: "02",
+        },
+        {
+          id: "3",
+          title: "03",
+        },
+      ],
     },
   },
 
@@ -84,241 +69,172 @@ export const SCREEN_RESPONSES = {
       chk_sandwich_8C2: false,
       chk_sandwich_8C3: false,
 
-      selector_1: {
-        type: "array",
-        items: {
-          type: "object",
-          properties: {
-            id: {
-              type: "string",
-            },
-            title: {
-              type: "string",
-            },
-          },
+      selector_1: [
+        {
+          id: "1",
+          title: "01",
         },
-        __example__: [
-          {
-            id: "1",
-            title: "01",
-          },
-          {
-            id: "2",
-            title: "02",
-          },
-        ],
-      },
-      panes: {
-        type: "array",
-        items: {
-          type: "object",
-          properties: {
-            id: {
-              type: "string",
-            },
-            title: {
-              type: "string",
-            },
-          },
+        {
+          id: "2",
+          title: "02",
         },
-        __example__: [
-          {
-            id: "Baguette",
-            title: "Baguette",
-          },
-          {
-            id: "Ajonjoli",
-            title: "Ajonjoli",
-          },
-          {
-            id: "Orégano",
-            title: "Orégano",
-          },
-          {
-            id: "Integral",
-            title: "Integral",
-          },
-          {
-            id: "Árabe",
-            title: "Árabe",
-          },
-          {
-            id: "Queso",
-            title: "Queso",
-          },
-        ],
-      },
-      salsas: {
-        type: "array",
-        items: {
-          type: "object",
-          properties: {
-            id: {
-              type: "string",
-            },
-            title: {
-              type: "string",
-            },
-          },
+      ],
+
+      panes: [
+        {
+          id: "Baguette",
+          title: "Baguette",
         },
-        __example__: [
-          {
-            id: "Mayonesa",
-            title: "Mayonesa",
-          },
-          {
-            id: "BBQ",
-            title: "BBQ",
-          },
-          {
-            id: "Ajo",
-            title: "Ajo",
-          },
-          {
-            id: "Chimichurri",
-            title: "Chimichurri",
-          },
-          {
-            id: "Aceite de oliva",
-            title: "Aceite de oliva",
-          },
-          {
-            id: "Mostaza",
-            title: "Mostaza",
-          },
-          {
-            id: "Miel mostaza",
-            title: "Miel mostaza",
-          },
-          {
-            id: "Napolitana Pietre's",
-            title: "Napolitana Pietre's",
-          },
-        ],
-      },
-      adicionales_carnes: {
-        type: "array",
-        items: {
-          type: "object",
-          properties: {
-            id: {
-              type: "string",
-            },
-            title: {
-              type: "string",
-            },
-            metadata: {
-              type: "string",
-            },
-          },
+        {
+          id: "Ajonjoli",
+          title: "Ajonjoli",
         },
-        __example__: [
-          {
-            id: "Pepperoni",
-            title: "Pepperoni",
-          },
-          {
-            id: "Chorizo español",
-            title: "Chorizo español",
-          },
-          {
-            id: "Jamón cerdo ahumado",
-            title: "Jamón cerdo ahumado",
-          },
-          {
-            id: "Jamón pollo ahumado",
-            title: "Jamón pollo ahumado",
-          },
-          {
-            id: "Chorizo colombiano",
-            title: "Chorizo colombiano",
-          },
-          {
-            id: "Tocineta ahumada",
-            title: "Tocineta ahumada",
-          },
-          {
-            id: "Jamón de pavo",
-            title: "Jamón de pavo",
-          },
-          {
-            id: "Salami español",
-            title: "Salami español",
-          },
-          {
-            id: "Carne molida",
-            title: "Carne molida",
-          },
-          {
-            id: "Pollo al horno",
-            title: "Pollo al horno",
-          },
-        ],
-      },
-      adicionales_vegetales: {
-        type: "array",
-        items: {
-          type: "object",
-          properties: {
-            id: {
-              type: "string",
-            },
-            title: {
-              type: "string",
-            },
-          },
+        {
+          id: "Orégano",
+          title: "Orégano",
         },
-        __example__: [
-          {
-            id: "Rugula, cebolla",
-            title: "Rugula, cebolla",
-          },
-          {
-            id: "Ciruela",
-            title: "Ciruela",
-          },
-          {
-            id: "Pimentón asado",
-            title: "Pimentón asado",
-          },
-          {
-            id: "Ciruela",
-            title: "Ciruela",
-          },
-          {
-            id: "Tomate",
-            title: "Tomate",
-          },
-          {
-            id: "Aceituna",
-            title: "Aceituna",
-          },
-          {
-            id: "Champiñon",
-            title: "Champiñon",
-          },
-          {
-            id: "Jalapeño",
-            title: "Jalapeño",
-          },
-          {
-            id: "Albahaca",
-            title: "Albahaca",
-          },
-          {
-            id: "Maiz",
-            title: "Maiz",
-          },
-          {
-            id: "Piña",
-            title: "Piña",
-          },
-          {
-            id: "Bocadillo",
-            title: "Bocadillo",
-          },
-        ],
-      },
+        {
+          id: "Integral",
+          title: "Integral",
+        },
+        {
+          id: "Árabe",
+          title: "Árabe",
+        },
+        {
+          id: "Queso",
+          title: "Queso",
+        },
+      ],
+
+      salsas: [
+        {
+          id: "Mayonesa",
+          title: "Mayonesa",
+        },
+        {
+          id: "BBQ",
+          title: "BBQ",
+        },
+        {
+          id: "Ajo",
+          title: "Ajo",
+        },
+        {
+          id: "Chimichurri",
+          title: "Chimichurri",
+        },
+        {
+          id: "Aceite de oliva",
+          title: "Aceite de oliva",
+        },
+        {
+          id: "Mostaza",
+          title: "Mostaza",
+        },
+        {
+          id: "Miel mostaza",
+          title: "Miel mostaza",
+        },
+        {
+          id: "Napolitana Pietre's",
+          title: "Napolitana Pietre's",
+        },
+      ],
+
+      adicionales_carnes: [
+        {
+          id: "Pepperoni",
+          title: "Pepperoni",
+        },
+        {
+          id: "Chorizo español",
+          title: "Chorizo español",
+        },
+        {
+          id: "Jamón cerdo ahumado",
+          title: "Jamón cerdo ahumado",
+        },
+        {
+          id: "Jamón pollo ahumado",
+          title: "Jamón pollo ahumado",
+        },
+        {
+          id: "Chorizo colombiano",
+          title: "Chorizo colombiano",
+        },
+        {
+          id: "Tocineta ahumada",
+          title: "Tocineta ahumada",
+        },
+        {
+          id: "Jamón de pavo",
+          title: "Jamón de pavo",
+        },
+        {
+          id: "Salami español",
+          title: "Salami español",
+        },
+        {
+          id: "Carne molida",
+          title: "Carne molida",
+        },
+        {
+          id: "Pollo al horno",
+          title: "Pollo al horno",
+        },
+      ],
+
+      adicionales_vegetales: [
+        {
+          id: "Rugula, cebolla",
+          title: "Rugula, cebolla",
+        },
+        {
+          id: "Ciruela",
+          title: "Ciruela",
+        },
+        {
+          id: "Pimentón asado",
+          title: "Pimentón asado",
+        },
+        {
+          id: "Ciruela",
+          title: "Ciruela",
+        },
+        {
+          id: "Tomate",
+          title: "Tomate",
+        },
+        {
+          id: "Aceituna",
+          title: "Aceituna",
+        },
+        {
+          id: "Champiñon",
+          title: "Champiñon",
+        },
+        {
+          id: "Jalapeño",
+          title: "Jalapeño",
+        },
+        {
+          id: "Albahaca",
+          title: "Albahaca",
+        },
+        {
+          id: "Maiz",
+          title: "Maiz",
+        },
+        {
+          id: "Piña",
+          title: "Piña",
+        },
+        {
+          id: "Bocadillo",
+          title: "Bocadillo",
+        },
+      ],
     },
   },
 
@@ -385,70 +301,56 @@ export const SCREEN_RESPONSES = {
         type: "boolean",
         __example__: false,
       },
-      selector_2: {
-        type: "array",
-        items: {
-          type: "object",
-          properties: {
-            id: {
-              type: "string",
-            },
-            title: {
-              type: "string",
-            },
-          },
+      selector_2: [
+        {
+          id: "1",
+          title: "01",
         },
-        __example__: [
-          {
-            id: "1",
-            title: "01",
-          },
-          {
-            id: "2",
-            title: "02",
-          },
-          {
-            id: "3",
-            title: "03",
-          },
-          {
-            id: "4",
-            title: "04",
-          },
-          {
-            id: "5",
-            title: "05",
-          },
-          {
-            id: "6",
-            title: "06",
-          },
-          {
-            id: "7",
-            title: "07",
-          },
-          {
-            id: "8",
-            title: "08",
-          },
-          {
-            id: "9",
-            title: "09",
-          },
-          {
-            id: "10",
-            title: "10",
-          },
-          {
-            id: "11",
-            title: "11",
-          },
-          {
-            id: "12",
-            title: "12",
-          },
-        ],
-      },
+        {
+          id: "2",
+          title: "02",
+        },
+        {
+          id: "3",
+          title: "03",
+        },
+        {
+          id: "4",
+          title: "04",
+        },
+        {
+          id: "5",
+          title: "05",
+        },
+        {
+          id: "6",
+          title: "06",
+        },
+        {
+          id: "7",
+          title: "07",
+        },
+        {
+          id: "8",
+          title: "08",
+        },
+        {
+          id: "9",
+          title: "09",
+        },
+        {
+          id: "10",
+          title: "10",
+        },
+        {
+          id: "11",
+          title: "11",
+        },
+        {
+          id: "12",
+          title: "12",
+        },
+      ],
     },
   },
 
@@ -515,70 +417,56 @@ export const SCREEN_RESPONSES = {
         type: "boolean",
         __example__: false,
       },
-      selector_2: {
-        type: "array",
-        items: {
-          type: "object",
-          properties: {
-            id: {
-              type: "string",
-            },
-            title: {
-              type: "string",
-            },
-          },
+      selector_2: [
+        {
+          id: "1",
+          title: "01",
         },
-        __example__: [
-          {
-            id: "1",
-            title: "01",
-          },
-          {
-            id: "2",
-            title: "02",
-          },
-          {
-            id: "3",
-            title: "03",
-          },
-          {
-            id: "4",
-            title: "04",
-          },
-          {
-            id: "5",
-            title: "05",
-          },
-          {
-            id: "6",
-            title: "06",
-          },
-          {
-            id: "7",
-            title: "07",
-          },
-          {
-            id: "8",
-            title: "08",
-          },
-          {
-            id: "9",
-            title: "09",
-          },
-          {
-            id: "10",
-            title: "10",
-          },
-          {
-            id: "11",
-            title: "11",
-          },
-          {
-            id: "12",
-            title: "12",
-          },
-        ],
-      },
+        {
+          id: "2",
+          title: "02",
+        },
+        {
+          id: "3",
+          title: "03",
+        },
+        {
+          id: "4",
+          title: "04",
+        },
+        {
+          id: "5",
+          title: "05",
+        },
+        {
+          id: "6",
+          title: "06",
+        },
+        {
+          id: "7",
+          title: "07",
+        },
+        {
+          id: "8",
+          title: "08",
+        },
+        {
+          id: "9",
+          title: "09",
+        },
+        {
+          id: "10",
+          title: "10",
+        },
+        {
+          id: "11",
+          title: "11",
+        },
+        {
+          id: "12",
+          title: "12",
+        },
+      ],
     },
   },
 
@@ -625,70 +513,56 @@ export const SCREEN_RESPONSES = {
         type: "boolean",
         __example__: false,
       },
-      selector_2: {
-        type: "array",
-        items: {
-          type: "object",
-          properties: {
-            id: {
-              type: "string",
-            },
-            title: {
-              type: "string",
-            },
-          },
+      selector_2: [
+        {
+          id: "1",
+          title: "01",
         },
-        __example__: [
-          {
-            id: "1",
-            title: "01",
-          },
-          {
-            id: "2",
-            title: "02",
-          },
-          {
-            id: "3",
-            title: "03",
-          },
-          {
-            id: "4",
-            title: "04",
-          },
-          {
-            id: "5",
-            title: "05",
-          },
-          {
-            id: "6",
-            title: "06",
-          },
-          {
-            id: "7",
-            title: "07",
-          },
-          {
-            id: "8",
-            title: "08",
-          },
-          {
-            id: "9",
-            title: "09",
-          },
-          {
-            id: "10",
-            title: "10",
-          },
-          {
-            id: "11",
-            title: "11",
-          },
-          {
-            id: "12",
-            title: "12",
-          },
-        ],
-      },
+        {
+          id: "2",
+          title: "02",
+        },
+        {
+          id: "3",
+          title: "03",
+        },
+        {
+          id: "4",
+          title: "04",
+        },
+        {
+          id: "5",
+          title: "05",
+        },
+        {
+          id: "6",
+          title: "06",
+        },
+        {
+          id: "7",
+          title: "07",
+        },
+        {
+          id: "8",
+          title: "08",
+        },
+        {
+          id: "9",
+          title: "09",
+        },
+        {
+          id: "10",
+          title: "10",
+        },
+        {
+          id: "11",
+          title: "11",
+        },
+        {
+          id: "12",
+          title: "12",
+        },
+      ],
     },
   },
 
@@ -711,70 +585,56 @@ export const SCREEN_RESPONSES = {
         type: "boolean",
         __example__: false,
       },
-      selector_2: {
-        type: "array",
-        items: {
-          type: "object",
-          properties: {
-            id: {
-              type: "string",
-            },
-            title: {
-              type: "string",
-            },
-          },
+      selector_2: [
+        {
+          id: "1",
+          title: "01",
         },
-        __example__: [
-          {
-            id: "1",
-            title: "01",
-          },
-          {
-            id: "2",
-            title: "02",
-          },
-          {
-            id: "3",
-            title: "03",
-          },
-          {
-            id: "4",
-            title: "04",
-          },
-          {
-            id: "5",
-            title: "05",
-          },
-          {
-            id: "6",
-            title: "06",
-          },
-          {
-            id: "7",
-            title: "07",
-          },
-          {
-            id: "8",
-            title: "08",
-          },
-          {
-            id: "9",
-            title: "09",
-          },
-          {
-            id: "10",
-            title: "10",
-          },
-          {
-            id: "11",
-            title: "11",
-          },
-          {
-            id: "12",
-            title: "12",
-          },
-        ],
-      },
+        {
+          id: "2",
+          title: "02",
+        },
+        {
+          id: "3",
+          title: "03",
+        },
+        {
+          id: "4",
+          title: "04",
+        },
+        {
+          id: "5",
+          title: "05",
+        },
+        {
+          id: "6",
+          title: "06",
+        },
+        {
+          id: "7",
+          title: "07",
+        },
+        {
+          id: "8",
+          title: "08",
+        },
+        {
+          id: "9",
+          title: "09",
+        },
+        {
+          id: "10",
+          title: "10",
+        },
+        {
+          id: "11",
+          title: "11",
+        },
+        {
+          id: "12",
+          title: "12",
+        },
+      ],
     },
   },
 
