@@ -15,6 +15,11 @@ export const SCREEN_RESPONSES = {
       chk_pizza_11: false,
       chk_pizza_12: false,
       chk_pizza_13: false,
+      chk_pizza_14: false,
+      chk_pizza_15: false,
+      chk_pizza_16: false,
+      chk_pizza_17: false,
+      chk_pizza_18: false,
 
       selector_1: [
         {
@@ -241,66 +246,22 @@ export const SCREEN_RESPONSES = {
   Lasagnas: {
     screen: "Lasagnas",
     data: {
-      chk_lgna_1: {
-        type: "boolean",
-        __example__: false,
-      },
-      chk_lgna_2: {
-        type: "boolean",
-        __example__: false,
-      },
-      chk_lgna_3: {
-        type: "boolean",
-        __example__: false,
-      },
-      chk_lgna_4: {
-        type: "boolean",
-        __example__: false,
-      },
-      chk_lgna_5: {
-        type: "boolean",
-        __example__: false,
-      },
-      chk_lgna_6: {
-        type: "boolean",
-        __example__: false,
-      },
-      chk_lgna_7: {
-        type: "boolean",
-        __example__: false,
-      },
-      chk_lgna_8: {
-        type: "boolean",
-        __example__: false,
-      },
-      chk_lgna_9: {
-        type: "boolean",
-        __example__: false,
-      },
-      chk_lgna_10: {
-        type: "boolean",
-        __example__: false,
-      },
-      chk_lgna_11: {
-        type: "boolean",
-        __example__: false,
-      },
-      chk_lgna_12: {
-        type: "boolean",
-        __example__: false,
-      },
-      chk_lgna_13: {
-        type: "boolean",
-        __example__: false,
-      },
-      chk_lgna_14: {
-        type: "boolean",
-        __example__: false,
-      },
-      chk_lgna_15: {
-        type: "boolean",
-        __example__: false,
-      },
+      chk_lgna_1: false,
+      chk_lgna_2: false,
+      chk_lgna_3: false,
+      chk_lgna_4: false,
+      chk_lgna_5: false,
+      chk_lgna_6: false,
+      chk_lgna_7: false,
+      chk_lgna_8: false,
+      chk_lgna_9: false,
+      chk_lgna_10: false,
+      chk_lgna_11: false,
+      chk_lgna_12: false,
+      chk_lgna_13: false,
+      chk_lgna_14: false,
+      chk_lgna_15: false,
+
       selector_2: [
         {
           id: "1",
@@ -357,66 +318,22 @@ export const SCREEN_RESPONSES = {
   Spaguettis: {
     screen: "Spaguettis",
     data: {
-      chk_spg_1: {
-        type: "boolean",
-        __example__: false,
-      },
-      chk_spg_2: {
-        type: "boolean",
-        __example__: false,
-      },
-      chk_spg_3: {
-        type: "boolean",
-        __example__: false,
-      },
-      chk_spg_4: {
-        type: "boolean",
-        __example__: false,
-      },
-      chk_spg_5: {
-        type: "boolean",
-        __example__: false,
-      },
-      chk_spg_6: {
-        type: "boolean",
-        __example__: false,
-      },
-      chk_spg_7: {
-        type: "boolean",
-        __example__: false,
-      },
-      chk_spg_8: {
-        type: "boolean",
-        __example__: false,
-      },
-      chk_spg_9: {
-        type: "boolean",
-        __example__: false,
-      },
-      chk_spg_10: {
-        type: "boolean",
-        __example__: false,
-      },
-      chk_spg_11: {
-        type: "boolean",
-        __example__: false,
-      },
-      chk_spg_12: {
-        type: "boolean",
-        __example__: false,
-      },
-      chk_spg_13: {
-        type: "boolean",
-        __example__: false,
-      },
-      chk_spg_14: {
-        type: "boolean",
-        __example__: false,
-      },
-      chk_spg_15: {
-        type: "boolean",
-        __example__: false,
-      },
+      chk_spg_1: false,
+      chk_spg_2: false,
+      chk_spg_3: false,
+      chk_spg_4: false,
+      chk_spg_5: false,
+      chk_spg_6: false,
+      chk_spg_7: false,
+      chk_spg_8: false,
+      chk_spg_9: false,
+      chk_spg_10: false,
+      chk_spg_11: false,
+      chk_spg_12: false,
+      chk_spg_13: false,
+      chk_spg_14: false,
+      chk_spg_15: false,
+
       selector_2: [
         {
           id: "1",
@@ -473,46 +390,17 @@ export const SCREEN_RESPONSES = {
   Strombolis: {
     screen: "Strombolis",
     data: {
-      chk_str_1: {
-        type: "boolean",
-        __example__: false,
-      },
-      chk_str_2: {
-        type: "boolean",
-        __example__: false,
-      },
-      chk_str_3: {
-        type: "boolean",
-        __example__: false,
-      },
-      chk_str_4: {
-        type: "boolean",
-        __example__: false,
-      },
-      chk_str_5: {
-        type: "boolean",
-        __example__: false,
-      },
-      chk_str_6: {
-        type: "boolean",
-        __example__: false,
-      },
-      chk_str_7: {
-        type: "boolean",
-        __example__: false,
-      },
-      chk_str_8: {
-        type: "boolean",
-        __example__: false,
-      },
-      chk_str_9: {
-        type: "boolean",
-        __example__: false,
-      },
-      chk_str_10: {
-        type: "boolean",
-        __example__: false,
-      },
+      chk_str_1: false,
+      chk_str_2: false,
+      chk_str_3: false,
+      chk_str_4: false,
+      chk_str_5: false,
+      chk_str_6: false,
+      chk_str_7: false,
+      chk_str_8: false,
+      chk_str_9: false,
+      chk_str_10: false,
+
       selector_2: [
         {
           id: "1",
@@ -569,22 +457,11 @@ export const SCREEN_RESPONSES = {
   Variedades: {
     screen: "Variedades",
     data: {
-      chk_variedad_1: {
-        type: "boolean",
-        __example__: false,
-      },
-      chk_variedad_2: {
-        type: "boolean",
-        __example__: false,
-      },
-      chk_variedad_3: {
-        type: "boolean",
-        __example__: false,
-      },
-      chk_variedad_4: {
-        type: "boolean",
-        __example__: false,
-      },
+      chk_variedad_1: false,
+      chk_variedad_2: false,
+      chk_variedad_3: false,
+      chk_variedad_4: false,
+      
       selector_2: [
         {
           id: "1",
