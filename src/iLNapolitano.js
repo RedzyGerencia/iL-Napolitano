@@ -353,14 +353,16 @@ export const getNextScreen = async (decryptedBody) => {
               body: JSON.stringify(params),
             });
 
-            const available = await response;
-            return available;
+            if (!response.ok) return false;
+
+            const available = await response.json();
+            return available === true;
           } catch (error) {
             return false;
           }
         }
 
-        const chk_disponibilidad = consultarDisponibilidad();
+        const chk_disponibilidad = await consultarDisponibilidad();
 
         return {
           ...SCREEN_RESPONSES.CREAR_RESERVA,
