@@ -313,7 +313,7 @@ export const getNextScreen = async (decryptedBody) => {
 
     switch (screen) {
       case "SERVICIOS":
-        if (data[chk_reserva]) {
+        if (data.chk_reserva) {
           return {
             ...SCREEN_RESPONSES.RESERVAS,
             data: {
