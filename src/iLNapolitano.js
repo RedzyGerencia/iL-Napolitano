@@ -332,12 +332,42 @@ export const getNextScreen = async (decryptedBody) => {
         }
 
       case "RESERVAS":
+        const url =
+          "https://api.apparta.co/table-availability-template-schedule-getAvailabilityBySlot";
+
+        async function consultarDisponibilidad() {
+          const params = {
+            meta_reservation_date: "2025-12-23",
+            meta_reservation_persons: 2,
+            establishment_id: "2094",
+            establishment_branch_id: "6934",
+            meta_reservation_start_time: "16:00:00",
+          };
+
+          try {
+            const response = await fetch(url, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(params),
+            });
+
+            const available = await response.json();
+            return available;
+          } catch (error) {
+            return false;
+          }
+        }
+
+        const chk_disponibilidad = consultarDisponibilidad();
+
         return {
           ...SCREEN_RESPONSES.CREAR_RESERVA,
           data: {
             ...SCREEN_RESPONSES.CREAR_RESERVA.data,
             ...data,
-            chk_disponibilidad: false,
+            chk_disponibilidad,
           },
         };
 
