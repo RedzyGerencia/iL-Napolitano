@@ -2,6 +2,24 @@ import { iLNapolitanoProductos } from "./iLNapolitanoProductos.js";
 import { selector_cantidades } from "./components.js";
 
 const SCREEN_RESPONSES = {
+  SERVICIOS: {
+    screen: "SERVICIOS",
+    data: {
+      chk_domicilio: false,
+      chk_reserva: false,
+    },
+  },
+
+  RESERVAS: {
+    screen: "RESERVAS",
+    data: {},
+  },
+
+  CREAR_RESERVA: {
+    screen: "CREAR_RESERVA",
+    data: {},
+  },
+
   ENTRADAS: {
     screen: "ENTRADAS",
     data: {
@@ -283,16 +301,46 @@ export const getNextScreen = async (decryptedBody) => {
   // handle initial request when opening the flow and display LOAN screen
   if (action === "INIT") {
     return {
-      ...SCREEN_RESPONSES.ENTRADAS,
+      ...SCREEN_RESPONSES.SERVICIOS,
       data: {
-        ...SCREEN_RESPONSES.ENTRADAS.data,
+        ...SCREEN_RESPONSES.SERVICIOS.data,
       },
     };
   }
 
   if (action === "data_exchange") {
     // handle the request based on the current screen
+
     switch (screen) {
+      case "SERVICIOS":
+        if (data[chk_reserva]) {
+          return {
+            ...SCREEN_RESPONSES.RESERVAS,
+            data: {
+              ...SCREEN_RESPONSES.RESERVAS.data,
+              ...data,
+            },
+          };
+        } else {
+          return {
+            ...SCREEN_RESPONSES.ENTRADAS,
+            data: {
+              ...SCREEN_RESPONSES.ENTRADAS.data,
+              ...data,
+            },
+          };
+        }
+
+      case "RESERVAS":
+        return {
+          ...SCREEN_RESPONSES.CREAR_RESERVA,
+          data: {
+            ...SCREEN_RESPONSES.CREAR_RESERVA.data,
+            ...data,
+            chk_disponibilidad: false,
+          },
+        };
+
       case "ENTRADAS":
         let chkEntrada = false;
 
