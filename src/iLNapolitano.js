@@ -338,9 +338,9 @@ export const getNextScreen = async (decryptedBody) => {
         async function consultarDisponibilidad() {
           const params = {
             meta_reservation_date: "2025-12-23",
-            meta_reservation_persons: 2,
-            establishment_id: "2094",
-            establishment_branch_id: "6934",
+            meta_reservation_persons: "2",
+            establishment_id: 2094,
+            establishment_branch_id: 6934,
             meta_reservation_start_time: "16:00:00",
           };
 
