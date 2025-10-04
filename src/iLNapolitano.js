@@ -353,8 +353,6 @@ export const getNextScreen = async (decryptedBody) => {
               body: JSON.stringify(params),
             });
 
-            if (!response.ok) return false;
-
             const available = await response.json();
             return available === true;
           } catch (error) {
