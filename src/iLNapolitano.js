@@ -335,13 +335,13 @@ export const getNextScreen = async (decryptedBody) => {
         const url =
           "https://api.apparta.co/table-availability-template-schedule-getAvailabilityBySlot";
 
-        async function consultarDisponibilidad() {
+        async function consultarDisponibilidad(fecha, hora, asistentes) {
           const params = {
-            meta_reservation_date: "2025-12-23",
-            meta_reservation_persons: "2",
+            meta_reservation_date: fecha,
+            meta_reservation_start_time: hora,
+            meta_reservation_persons: asistentes,
             establishment_id: 2094,
             establishment_branch_id: 6934,
-            meta_reservation_start_time: "16:00:00",
           };
 
           try {
@@ -361,7 +361,11 @@ export const getNextScreen = async (decryptedBody) => {
           }
         }
 
-        const chk_disponibilidad = await consultarDisponibilidad();
+        const chk_disponibilidad = await consultarDisponibilidad(
+          data.fecha_reserva,
+          data.hora_reserva,
+          data.asistentes_reserva
+        );
 
         return {
           ...SCREEN_RESPONSES.CREAR_RESERVA,
