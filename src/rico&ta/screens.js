@@ -23,7 +23,7 @@ export const SCREEN_RESPONSES = {
       comidas_rapidas: false,
       hamburguesas: false,
       perros_calientes: false,
-      chk_pizza: false,
+      pizzas: false,
       especiales: false,
       combos: false,
       chk_des_1: false,
