@@ -1,3 +1,5 @@
+export const pizzas = {};
+
 export const productos = {
   Bogotano: 9000,
   Tolimense: 12500,
