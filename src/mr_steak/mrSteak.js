@@ -53,18 +53,18 @@ export const getNextScreen = async (decryptedBody) => {
 
       case "Cantidades":
         return {
-          ...SCREEN_RESPONSES.Bebidas,
+          ...SCREEN_RESPONSES.Adicionales,
           data: {
-            ...SCREEN_RESPONSES.Bebidas.data,
+            ...SCREEN_RESPONSES.Adicionales.data,
             ...data,
           },
         };
 
       case "Adicionales":
         return {
-          ...SCREEN_RESPONSES.Adicionales,
+          ...SCREEN_RESPONSES.Bebidas,
           data: {
-            ...SCREEN_RESPONSES.Adicionales.data,
+            ...SCREEN_RESPONSES.Bebidas.data,
             ...data,
           },
         };
