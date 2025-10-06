@@ -6,7 +6,7 @@ export const SCREEN_RESPONSES = {
     data: {
       Hamburguesas: false,
       Sandwiches: false,
-      "Hot Dogs": false,
+      Hotdogs: false,
       Parrilla: false,
       Ahumados: false,
       Horneadas: false,
