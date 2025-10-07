@@ -103,37 +103,37 @@ export const SCREEN_RESPONSES = {
 
       sabores_pizza: [
         {
-          id: "1",
+          id: "Hawaiana",
           title: "Hawaiana",
           description: "Piña, Jamón.",
         },
         {
-          id: "2",
+          id: "Mexicana",
           title: "Mexicana",
           description: "Boloñesa, pico e gallo y totopos.",
         },
         {
-          id: "3",
+          id: "Salami",
           title: "Salami",
           description: "Jamón y salami.",
         },
         {
-          id: "4",
+          id: "Carnes Frias",
           title: "Carnes Frias",
           description: "Chorizo, maíz, carne desmechada y boloñeza.",
         },
         {
-          id: "5",
+          id: "Criolla",
           title: "Criolla",
           description: "Tocineta, maíz, chorizo y cebolla.",
         },
         {
-          id: "6",
+          id: "Ranchera",
           title: "Ranchera",
           description: "Tocineta, maíz, chorizo y cebolla.",
         },
         {
-          id: "7",
+          id: "Pollo Champiñones",
           title: "Pollo Champiñones",
           description: "Pollo con champiñones.",
         },
@@ -141,22 +141,22 @@ export const SCREEN_RESPONSES = {
 
       porciones_pizza: [
         {
-          id: "familiar",
+          id: "Familiar",
           title: "Familiar 50x50 cm",
           metadata: "$60.000",
         },
         {
-          id: "mediana",
+          id: "Mediana",
           title: "Mediana 40x40 cm",
           metadata: "$38.000",
         },
         {
-          id: "pizzeta",
+          id: "Pizzeta",
           title: "Pizzeta 22x22 cm",
           metadata: "$15.000",
         },
         {
-          id: "porción",
+          id: "Porción",
           title: "Porción",
           metadata: "$8.000",
         },

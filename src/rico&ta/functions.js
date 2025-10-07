@@ -18,7 +18,7 @@ export function generarDatosPedido(data) {
     const sabor = pizza.sabor_1;
 
     const clave = `${sabor} ${tam}`;
-    const precio = pizzas[clave] || 0;
+    const precio = pizzas[tam] || 0;
 
     totalPizzas += precio;
 

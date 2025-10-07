@@ -1,4 +1,9 @@
-export const pizzas = {};
+export const pizzas = {
+  Familiar: 60000,
+  Mediana: 38000,
+  Pizzeta: 15000,
+  Porción: 8000,
+};
 
 export const productos = {
   Bogotano: 9000,
