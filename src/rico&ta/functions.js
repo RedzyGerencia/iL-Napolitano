@@ -11,11 +11,11 @@ export function generarDatosPedido(data) {
     const chk = pizza[`chk_${key}`];
 
     if (!chk) continue;
+    if (!pizza.sabor1) continue;
     if (!pizza.tamano) continue;
-    if (!pizza.sabor_1) continue;
 
     const tam = pizza.tamano;
-    const sabor = pizza.sabor_1;
+    const sabor = pizza.sabor1;
 
     const clave = `${sabor} ${tam}`;
     const precio = pizzas[tam] || 0;
