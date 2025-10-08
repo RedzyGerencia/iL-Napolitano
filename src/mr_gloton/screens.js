@@ -1,0 +1,126 @@
+import { selector_cantidades } from "./components.js";
+
+export const SCREEN_RESPONSES = {
+  Inicio: {
+    screen: "Inicio",
+    data: {
+      Entradas: false,
+      "2x1_Alitas": false,
+      Hamburguesas: false,
+      Hot_Dogs: false,
+      Mazorcadas: false,
+    },
+  },
+
+  Productos: {
+    screen: "Productos",
+    data: {
+      Entradas: false,
+      "2x1_Alitas": false,
+      Hamburguesas: false,
+      Hot_Dogs: false,
+      Mazorcadas: false,
+      chk_ent_1: false,
+      chk_ent_2: false,
+      chk_ent_3: false,
+      chk_ala_1: false,
+      chk_ala_2: false,
+      chk_ala_3: false,
+      chk_ham_1: false,
+      chk_ham_2: false,
+      chk_ham_3: false,
+      chk_ham_4: false,
+      chk_ham_5: false,
+      chk_ham_6: false,
+      chk_ham_7: false,
+      chk_ham_8: false,
+      chk_ham_9: false,
+      chk_ham_10: false,
+      chk_ham_11: false,
+      chk_ham_12: false,
+      chk_ham_13: false,
+      chk_ham_14: false,
+      chk_ham_15: false,
+      chk_ham_16: false,
+      chk_dog_1: false,
+      chk_dog_2: false,
+      chk_dog_3: false,
+      chk_dog_4: false,
+      chk_dog_5: false,
+      chk_maz_1: false,
+      chk_maz_2: false,
+      chk_maz_3: false,
+      chk_maz_4: false,
+    },
+  },
+
+  Cantidades: {
+    screen: "Cantidades",
+    data: {
+      chk_ent_1: false,
+      chk_ent_2: false,
+      chk_ent_3: false,
+      chk_ala_1: false,
+      chk_ala_2: false,
+      chk_ala_3: false,
+      chk_ham_1: false,
+      chk_ham_2: false,
+      chk_ham_3: false,
+      chk_ham_4: false,
+      chk_ham_5: false,
+      chk_ham_6: false,
+      chk_ham_7: false,
+      chk_ham_8: false,
+      chk_ham_9: false,
+      chk_ham_10: false,
+      chk_ham_11: false,
+      chk_ham_12: false,
+      chk_ham_13: false,
+      chk_ham_14: false,
+      chk_ham_15: false,
+      chk_ham_16: false,
+      chk_dog_1: false,
+      chk_dog_2: false,
+      chk_dog_3: false,
+      chk_dog_4: false,
+      chk_dog_5: false,
+      chk_maz_1: false,
+      chk_maz_2: false,
+      chk_maz_3: false,
+      chk_maz_4: false,
+      selector_cantidades,
+    },
+  },
+
+  Adicionales: {
+    screen: "Adicionales",
+    data: {
+      chk_ad_papas_1: false,
+      chk_ad_papas_2: false,
+      chk_ad_papas_3: false,
+      selector_cantidades,
+    },
+  },
+
+  Resumen: {
+    screen: "Resumen",
+    data: {},
+  },
+
+  Formulario: {
+    screen: "Formulario",
+    data: {},
+  },
+
+  SUCCESS: {
+    screen: "SUCCESS",
+    data: {
+      extension_message_response: {
+        params: {
+          flow_token: "REPLACE_FLOW_TOKEN",
+          some_param_name: "PASS_CUSTOM_VALUE",
+        },
+      },
+    },
+  },
+};
