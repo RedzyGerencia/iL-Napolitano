@@ -2,24 +2,6 @@ import { iLNapolitanoProductos } from "./iLNapolitanoProductos.js";
 import { selector_cantidades } from "./components.js";
 
 const SCREEN_RESPONSES = {
-  SERVICIOS: {
-    screen: "SERVICIOS",
-    data: {
-      chk_domicilio: false,
-      chk_reserva: false,
-    },
-  },
-
-  RESERVAS: {
-    screen: "RESERVAS",
-    data: {},
-  },
-
-  CREAR_RESERVA: {
-    screen: "CREAR_RESERVA",
-    data: {},
-  },
-
   ENTRADAS: {
     screen: "ENTRADAS",
     data: {
@@ -301,9 +283,9 @@ export const getNextScreen = async (decryptedBody) => {
   // handle initial request when opening the flow and display LOAN screen
   if (action === "INIT") {
     return {
-      ...SCREEN_RESPONSES.SERVICIOS,
+      ...SCREEN_RESPONSES.ENTRADAS,
       data: {
-        ...SCREEN_RESPONSES.SERVICIOS.data,
+        ...SCREEN_RESPONSES.ENTRADAS.data,
       },
     };
   }
@@ -312,70 +294,6 @@ export const getNextScreen = async (decryptedBody) => {
     // handle the request based on the current screen
 
     switch (screen) {
-      case "SERVICIOS":
-        if (data.chk_reserva) {
-          return {
-            ...SCREEN_RESPONSES.RESERVAS,
-            data: {
-              ...SCREEN_RESPONSES.RESERVAS.data,
-              ...data,
-            },
-          };
-        } else {
-          return {
-            ...SCREEN_RESPONSES.ENTRADAS,
-            data: {
-              ...SCREEN_RESPONSES.ENTRADAS.data,
-              ...data,
-            },
-          };
-        }
-
-      case "RESERVAS":
-        const url =
-          "https://api.apparta.co/table-availability-template-schedule-getAvailabilityBySlot";
-
-        async function consultarDisponibilidad(fecha, hora, asistentes) {
-          const params = {
-            meta_reservation_date: fecha,
-            meta_reservation_start_time: hora,
-            meta_reservation_persons: asistentes,
-            establishment_id: 2094,
-            establishment_branch_id: 6934,
-          };
-
-          try {
-            const response = await fetch(url, {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify(params),
-            });
-
-            const data = await response.json();
-            const available = data.availability === "true";
-            return available;
-          } catch (error) {
-            return false;
-          }
-        }
-
-        const chk_disponibilidad = await consultarDisponibilidad(
-          data.fecha_reserva,
-          data.hora_reserva,
-          data.asistentes_reserva
-        );
-
-        return {
-          ...SCREEN_RESPONSES.CREAR_RESERVA,
-          data: {
-            ...SCREEN_RESPONSES.CREAR_RESERVA.data,
-            ...data,
-            chk_disponibilidad,
-          },
-        };
-
       case "ENTRADAS":
         let chkEntrada = false;
 
