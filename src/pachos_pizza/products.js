@@ -1,0 +1,33 @@
+export const productos = {
+  "Pastas Gratinadas": 28000,
+  "Pastas Boloñesa": 26000,
+  "Pastas Carbonara": 28000,
+  "Lasagna de Carne": 21500,
+  "Lasagna de Pollo": 21500,
+  "Lasagna Carne y Champiñones": 22500,
+  "Lasagna Pollo y Champiñones": 22500,
+  "Lasagna Mixta": 22500,
+  "Lasagna Especial": 23500,
+  "Maicitos Gratinados": 18000,
+  "Maicitos con Tocineta": 20000,
+  "Maicitos con Pollo": 20000,
+  "Maicitos con Mixto": 21500,
+  "Canelones de Carne": 25500,
+  "Canelones de Pollo": 25500,
+  "Canelones Mixto": 25500,
+  "Calzone Cualquier Sabor": 25500,
+  "Sandwiche Gratinado": 21500,
+};
+
+export const bebidas = {
+  "Coca Cola Mega": 14000,
+  "Coca Cola 1,5": 9500,
+  "Coca Cola 400ml": 5500,
+  "Coca Cola Mini 250ml": 4000,
+  "Jugo en Agua": 6500,
+  "Jugo en Leche": 7500,
+  Limonada: 8500,
+  "Limonada de Cereza": 8000,
+  "Limonada de Coco": 12000,
+  Cervezas: 7000,
+};
