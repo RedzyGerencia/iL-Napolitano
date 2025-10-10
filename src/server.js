@@ -4,7 +4,7 @@ import {
   encryptResponse,
   FlowEndpointException,
 } from "./encryption.js";
-import { getNextScreen } from "./pachos_pizza/pachos_pizza.js";
+import { getNextScreen } from "./mr_gloton/mr_gloton.js";
 import crypto from "crypto";
 
 const app = express();
