@@ -58,6 +58,11 @@ export const SCREEN_RESPONSES = {
       chk_pizza_esp_3: false,
       chk_pizza_esp_4: false,
       chk_pizza_esp_5: false,
+      chk_pizza_bq_1: false,
+      chk_pizza_bq_2: false,
+      chk_pizza_bq_3: false,
+      chk_pizza_bq_4: false,
+      chk_pizza_bq_5: false,
 
       sabores_pizza: [
         {
@@ -159,37 +164,37 @@ export const SCREEN_RESPONSES = {
 
       porciones_pizza: [
         {
-          id: "Mini",
+          id: "Tradicional Mini",
           title: "MINI / 4 Porciones",
           description: "Tamaño: 18cm",
           metadata: "$14.500",
         },
         {
-          id: "Personal",
+          id: "Tradicional Personal",
           title: "PERSONAL / 6 Porciones",
           description: "Tamaño: 24cm",
           metadata: "$27.000",
         },
         {
-          id: "Mediana",
+          id: "Tradicional Mediana",
           title: "MEDIANA / 8 Porciones",
           description: "Tamaño: 30cm",
           metadata: "$38.500",
         },
         {
-          id: "Grande",
+          id: "Tradicional Grande",
           title: "GRANDE / 10 Porciones",
           description: "Tamaño: 35cm",
           metadata: "$46.500",
         },
         {
-          id: "Extra Grande",
+          id: "Tradicional Extra Grande",
           title: "EXTRA GRANDE / 12 Porciones",
           description: "Tamaño: 40cm",
           metadata: "$60.500",
         },
         {
-          id: "Jumbo",
+          id: "Tradicional Jumbo",
           title: "JUMBO / 16 Porciones",
           description: "Tamaño: 50cm",
           metadata: "$78.000",
@@ -251,37 +256,37 @@ export const SCREEN_RESPONSES = {
 
       porciones_especiales: [
         {
-          id: "Mini",
+          id: "Especial Mini",
           title: "MINI / 4 Porciones",
           description: "Tamaño: 18cm",
           metadata: "$17.000",
         },
         {
-          id: "Personal",
+          id: "Especial Personal",
           title: "PERSONAL / 6 Porciones",
           description: "Tamaño: 24cm",
           metadata: "$32.500",
         },
         {
-          id: "Mediana",
+          id: "Especial Mediana",
           title: "MEDIANA / 8 Porciones",
           description: "Tamaño: 30cm",
           metadata: "$45.500",
         },
         {
-          id: "Grande",
+          id: "Especial Grande",
           title: "GRANDE / 10 Porciones",
           description: "Tamaño: 35cm",
           metadata: "$54.500",
         },
         {
-          id: "Extra Grande",
+          id: "Especial Extra Grande",
           title: "EXTRA GRANDE / 12 Porciones",
           description: "Tamaño: 40cm",
           metadata: "$65.500",
         },
         {
-          id: "Jumbo",
+          id: "Especial Jumbo",
           title: "JUMBO / 16 Porciones",
           description: "Tamaño: 50cm",
           metadata: "$90.000",
@@ -438,37 +443,37 @@ export const SCREEN_RESPONSES = {
 
       porciones_bordequeso: [
         {
-          id: "Mini",
+          id: "Borde Queso Mini",
           title: "MINI / 4 Porciones",
           description: "Tamaño: 18cm",
           metadata: "$18.500",
         },
         {
-          id: "Personal",
+          id: "Borde Queso Personal",
           title: "PERSONAL / 6 Porciones",
           description: "Tamaño: 24cm",
           metadata: "$35.000",
         },
         {
-          id: "Mediana",
+          id: "Borde Queso Mediana",
           title: "MEDIANA / 8 Porciones",
           description: "Tamaño: 30cm",
           metadata: "$49.000",
         },
         {
-          id: "Grande",
+          id: "Borde Queso Grande",
           title: "GRANDE / 10 Porciones",
           description: "Tamaño: 35cm",
           metadata: "$58.000",
         },
         {
-          id: "Extra Grande",
+          id: "Borde Queso Extra Grande",
           title: "EXTRA GRANDE / 12 Porciones",
           description: "Tamaño: 40cm",
           metadata: "$70.500",
         },
         {
-          id: "Jumbo",
+          id: "Borde Queso Jumbo",
           title: "JUMBO / 16 Porciones",
           description: "Tamaño: 50cm",
           metadata: "$96.000",

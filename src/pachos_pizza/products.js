@@ -19,6 +19,29 @@ export const productos = {
   "Sandwiche Gratinado": 21500,
 };
 
+export const tamanos = {
+  "Tradicional Mini": 14500,
+  "Tradicional Personal": 27000,
+  "Tradicional Mediana": 38500,
+  "Tradicional Grande": 46500,
+  "Tradicional Extra Grande": 60500,
+  "Tradicional Jumbo": 78000,
+
+  "Especial Mini": 17000,
+  "Especial Personal": 32500,
+  "Especial Mediana": 45500,
+  "Especial Grande": 54500,
+  "Especial Extra Grande": 65500,
+  "Especial Jumbo": 90000,
+
+  "Borde Queso Mini": 18500,
+  "Borde Queso Personal": 35000,
+  "Borde Queso Mediana": 49000,
+  "Borde Queso Grande": 58000,
+  "Borde Queso Extra Grande": 70500,
+  "Borde Queso Jumbo": 96000,
+};
+
 export const bebidas = {
   "Coca Cola Mega": 14000,
   "Coca Cola 1,5": 9500,
