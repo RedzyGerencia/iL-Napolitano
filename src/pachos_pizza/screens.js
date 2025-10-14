@@ -61,96 +61,96 @@ export const SCREEN_RESPONSES = {
 
       sabores_pizza: [
         {
-          id: "1",
+          id: "Peperoni",
           title: "Peperoni",
           description: "Salsa napolitana, queso y peperoni.",
         },
         {
-          id: "2",
+          id: "Peperoni y Champiñones",
           title: "Peperoni y Champiñones",
           description: "Salsa napolitana, queso, peperoni y champiñones.",
         },
         {
-          id: "3",
+          id: "Hawaiana",
           title: "Hawaiana",
           description: "Salsa de piña, queso, jamón y piña.",
         },
         {
-          id: "4",
+          id: "Queso",
           title: "Queso",
           description: "Salsa napolitana y queso.",
         },
         {
-          id: "5",
+          id: "Vegetales",
           title: "Vegetales",
           description:
             "Salsa napolitana, queso, champiñon, cebolla, pimentón y tomate.",
         },
         {
-          id: "6",
+          id: "Napolitana",
           title: "Napolitana",
           description: "Salsa napolitana, queso, rodajas de tomate y albaca.",
         },
         {
-          id: "7",
+          id: "Pollo",
           title: "Pollo",
           description: "Salsa napolitana, queso y pollo.",
         },
         {
-          id: "8",
+          id: "Pollo y Champiñones",
           title: "Pollo y Champiñones",
           description: "Salsa napolitana, queso, pollo y champiñones.",
         },
         {
-          id: "9",
+          id: "Pollo y BBQ",
           title: "Pollo y BBQ",
           description: "Salsa napolitana, queso, pollo y BBQ.",
         },
         {
-          id: "10",
+          id: "Carne con Tocineta",
           title: "Carne con Tocineta",
           description:
             "Salsa napolitana, queso, tocineta, chorizo, jamón, salchicha.",
         },
         {
-          id: "11",
+          id: "Tocineta y Maíz",
           title: "Tocineta y Maíz",
           description: "Salsa napolitana, queso, tocineta y maíz.",
         },
         {
-          id: "12",
+          id: "Jamón",
           title: "Jamón",
           description: "Salsa napolitana, queso y jamón.",
         },
         {
-          id: "13",
+          id: "Tocineta",
           title: "Tocineta",
           description: "Salsa napolitana, queso y tocineta.",
         },
         {
-          id: "14",
+          id: "Carnes",
           title: "Carnes",
           description: "Salsa napolitana, queso, salami, jamón y cabano.",
         },
         {
-          id: "15",
+          id: "Pizza Ranchera",
           title: "Pizza Ranchera",
           description:
             "Salsa napolitana, queso, chorizo, jamón, tocineta, maíz.",
         },
         {
-          id: "16",
+          id: "Pizza de la Casa",
           title: "Pizza de la Casa",
           description:
             "Salsa napolitana, queso, champiñon, jamón, tocineta, maíz.",
         },
         {
-          id: "17",
+          id: "Pizza Colombiana",
           title: "Pizza Colombiana",
           description: "Salsa napolitana, queso, chorizo, maíz y aguacate.",
         },
         {
-          id: "18",
+          id: "Pizza Mixta",
           title: "Pizza Mixta",
           description:
             "Salsa napolitana, queso, salami, jamón, cabano, cebolla, pimentón y tomate.",
@@ -198,51 +198,51 @@ export const SCREEN_RESPONSES = {
 
       sabores_especiales: [
         {
-          id: "1",
+          id: "Hawaiana con Tocineta",
           title: "Hawaiana con Tocineta",
           description: "Salsa de piña, queso, piña, jamón y tocienta.",
         },
         {
-          id: "2",
+          id: "Pollo Tocineta",
           title: "Pollo Tocineta",
           description: "Salsa napolitana, queso, pollo y tocineta.",
         },
         {
-          id: "3",
+          id: "Desmechada y Tocineta",
           title: "Desmechada y Tocineta",
           description: "Salsa napolitana, queso, carne desmechada y tocineta.",
         },
         {
-          id: "4",
+          id: "Desmechada y Champiñones",
           title: "Desmechada y Champiñones",
           description:
             "Salsa napolitana, queso mozarela, queso azul y queso parmesano.",
         },
         {
-          id: "5",
+          id: "Tres Quesos",
           title: "Tres Quesos",
           description:
             "Salsa napolitana, queso mozarela, queso azul y queso parmesano.",
         },
         {
-          id: "6",
+          id: "Mexicana",
           title: "Mexicana",
           description:
             "Salsa napolitana, queso, carne desmechada, jalapeño, maíz y aguacate.",
         },
         {
-          id: "7",
+          id: "Pizza Pacho",
           title: "Pizza Pacho",
           description:
             "Salsa napolitana, queso, pollo, carne desmechada y tocineta.",
         },
         {
-          id: "8",
+          id: "Peperoni y Tocineta",
           title: "Peperoni y Tocineta",
           description: "Salsa Napolitana, queso, peperoni y tocineta.",
         },
         {
-          id: "9",
+          id: "Árabe",
           title: "Árabe",
           description:
             "Salsa napolitana, queso, pepinillos, tomate y aceitunas.",
@@ -290,9 +290,149 @@ export const SCREEN_RESPONSES = {
 
       sabores_bordequeso: [
         {
-          id: "1",
+          id: "Peperoni",
+          title: "Peperoni",
+          description: "Salsa napolitana, queso y peperoni.",
+        },
+        {
+          id: "Peperoni y Champiñones",
+          title: "Peperoni y Champiñones",
+          description: "Salsa napolitana, queso, peperoni y champiñones.",
+        },
+        {
+          id: "Peperoni y Tocineta",
+          title: "Peperoni y Tocineta",
+          description: "Salsa Napolitana, queso, peperoni y tocineta.",
+        },
+        {
+          id: "Hawaiana",
+          title: "Hawaiana",
+          description: "Salsa de piña, queso, jamón y piña.",
+        },
+        {
+          id: "Hawaiana con Tocineta",
           title: "Hawaiana con Tocineta",
           description: "Salsa de piña, queso, piña, jamón y tocienta.",
+        },
+        {
+          id: "Queso",
+          title: "Queso",
+          description: "Salsa napolitana y queso.",
+        },
+        {
+          id: "Vegetales",
+          title: "Vegetales",
+          description:
+            "Salsa napolitana, queso, champiñon, cebolla, pimentón y tomate.",
+        },
+        {
+          id: "Napolitana",
+          title: "Napolitana",
+          description: "Salsa napolitana, queso, rodajas de tomate y albaca.",
+        },
+        {
+          id: "Pollo",
+          title: "Pollo",
+          description: "Salsa napolitana, queso y pollo.",
+        },
+        {
+          id: "Pollo y Champiñones",
+          title: "Pollo y Champiñones",
+          description: "Salsa napolitana, queso, pollo y champiñones.",
+        },
+        {
+          id: "Pollo y BBQ",
+          title: "Pollo y BBQ",
+          description: "Salsa napolitana, queso, pollo y BBQ.",
+        },
+        {
+          id: "Pollo Tocineta",
+          title: "Pollo Tocineta",
+          description: "Salsa napolitana, queso, pollo y tocineta.",
+        },
+        {
+          id: "Carne con Tocineta",
+          title: "Carne con Tocineta",
+          description:
+            "Salsa napolitana, queso, tocineta, chorizo, jamón, salchicha.",
+        },
+        {
+          id: "Tocineta",
+          title: "Tocineta",
+          description: "Salsa napolitana, queso y tocineta.",
+        },
+        {
+          id: "Tocineta y Maíz",
+          title: "Tocineta y Maíz",
+          description: "Salsa napolitana, queso, tocineta y maíz.",
+        },
+        {
+          id: "Jamón",
+          title: "Jamón",
+          description: "Salsa napolitana, queso y jamón.",
+        },
+        {
+          id: "Carnes",
+          title: "Carnes",
+          description: "Salsa napolitana, queso, salami, jamón y cabano.",
+        },
+        {
+          id: "Pizza Ranchera",
+          title: "Pizza Ranchera",
+          description:
+            "Salsa napolitana, queso, chorizo, jamón, tocineta, maíz.",
+        },
+        {
+          id: "Pizza de la Casa",
+          title: "Pizza de la Casa",
+          description:
+            "Salsa napolitana, queso, champiñon, jamón, tocineta, maíz.",
+        },
+        {
+          id: "Pizza Colombiana",
+          title: "Pizza Colombiana",
+          description: "Salsa napolitana, queso, chorizo, maíz y aguacate.",
+        },
+        {
+          id: "Pizza Mixta",
+          title: "Pizza Mixta",
+          description:
+            "Salsa napolitana, queso, salami, jamón, cabano, cebolla, pimentón y tomate.",
+        },
+        {
+          id: "Desmechada y Tocineta",
+          title: "Desmechada y Tocineta",
+          description: "Salsa napolitana, queso, carne desmechada y tocineta.",
+        },
+        {
+          id: "Desmechada y Champiñones",
+          title: "Desmechada y Champiñones",
+          description:
+            "Salsa napolitana, queso mozarela, queso azul y queso parmesano.",
+        },
+        {
+          id: "Tres Quesos",
+          title: "Tres Quesos",
+          description:
+            "Salsa napolitana, queso mozarela, queso azul y queso parmesano.",
+        },
+        {
+          id: "Mexicana",
+          title: "Mexicana",
+          description:
+            "Salsa napolitana, queso, carne desmechada, jalapeño, maíz y aguacate.",
+        },
+        {
+          id: "Pizza Pacho",
+          title: "Pizza Pacho",
+          description:
+            "Salsa napolitana, queso, pollo, carne desmechada y tocineta.",
+        },
+        {
+          id: "Árabe",
+          title: "Árabe",
+          description:
+            "Salsa napolitana, queso, pepinillos, tomate y aceitunas.",
         },
       ],
 
