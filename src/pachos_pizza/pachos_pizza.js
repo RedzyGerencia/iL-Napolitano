@@ -43,13 +43,32 @@ export const getNextScreen = async (decryptedBody) => {
         };
 
       case "Productos":
-        return {
-          ...SCREEN_RESPONSES.Cantidades,
-          data: {
-            ...SCREEN_RESPONSES.Cantidades.data,
-            ...data,
-          },
-        };
+        let showScreenCantidades = false;
+
+        for (const key in data) {
+          if (key.startsWith("chk_") && data[key] === true) {
+            showScreenCantidades = true;
+            break;
+          }
+        }
+
+        if (showScreenCantidades) {
+          return {
+            ...SCREEN_RESPONSES.Cantidades,
+            data: {
+              ...SCREEN_RESPONSES.Cantidades.data,
+              ...data,
+            },
+          };
+        } else {
+          return {
+            ...SCREEN_RESPONSES.Bebidas,
+            data: {
+              ...SCREEN_RESPONSES.Bebidas.data,
+              ...data,
+            },
+          };
+        }
 
       case "Cantidades":
         return {
