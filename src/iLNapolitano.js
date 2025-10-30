@@ -365,7 +365,7 @@ export const getNextScreen = async (decryptedBody) => {
           ensaladasPostres = {},
           bebidas = {},
           obs_productos = "",
-          obs_ENSALADAS_POSTRES = "",
+          obs_productos_2 = "",
         } = data ?? {};
 
         const productosPedido = {
@@ -386,7 +386,8 @@ export const getNextScreen = async (decryptedBody) => {
             mensaje: texto,
             valorTotal: totalPedido,
             valorTotalStr: totalString,
-            obs_productos: obs_productos,
+            obs_productos,
+            obs_productos_2,
           },
         };
 
