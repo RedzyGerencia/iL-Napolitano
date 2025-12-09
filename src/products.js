@@ -75,6 +75,8 @@ export const productos = {
   "Torta Chocolate Alemana": 17000,
   "Torta de Croissant": 16000,
   "Red Velvet Pistacho": 17000,
+  "Merengon italiano": 8000,
+  "Torta de quesos italianos": 17000,
 };
 
 export const bebidas = {

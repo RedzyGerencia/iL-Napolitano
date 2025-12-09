@@ -54,7 +54,6 @@ export const SCREEN_RESPONSES = {
       chk_sug_14: false,
       chk_sug_15: false,
       chk_sug_16: false,
-      chk_sug_17: false,
       chk_sug_18: false,
       chk_sug_19: false,
       chk_sug_20: false,
@@ -87,6 +86,8 @@ export const SCREEN_RESPONSES = {
       chk_pos_6: false,
       chk_pos_7: false,
       chk_pos_8: false,
+      chk_pos_9: false,
+      chk_pos_10: false,
     },
   },
 
@@ -119,7 +120,6 @@ export const SCREEN_RESPONSES = {
       chk_sug_14: false,
       chk_sug_15: false,
       chk_sug_16: false,
-      chk_sug_17: false,
       chk_sug_18: false,
       chk_sug_19: false,
       chk_sug_20: false,
@@ -152,6 +152,8 @@ export const SCREEN_RESPONSES = {
       chk_pos_6: false,
       chk_pos_7: false,
       chk_pos_8: false,
+      chk_pos_9: false,
+      chk_pos_10: false,
 
       selector_cantidades,
     },
