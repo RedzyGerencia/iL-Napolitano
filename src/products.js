@@ -1,4 +1,4 @@
-export const iLNapolitanoProductos = {
+export const productos = {
   //Entradas
   "Fagottinis Bolognese": 22000,
   "Fagottinis Ricotta": 24000,
@@ -11,7 +11,6 @@ export const iLNapolitanoProductos = {
   "Carpaccio di Lomito Fino": 42000,
   "Carpaccio di Polpo": 58000,
 
-  //Sugerencias
   //Arroces
   "Risotto ai Frutti di Mare": 68000,
   "Italian Paella": 76000,
@@ -76,8 +75,9 @@ export const iLNapolitanoProductos = {
   "Torta Chocolate Alemana": 17000,
   "Torta de Croissant": 16000,
   "Red Velvet Pistacho": 17000,
+};
 
-  //Bebidas
+export const bebidas = {
   Peroni: 15000,
   Stella: 12000,
   BBC: 12000,
